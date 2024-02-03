@@ -1,0 +1,51 @@
+#include< string >
+string s;
+查找字符函数：  find()
+               
+               s.find(str) != string::npos    //find()没找到返回 string::npos 
+
+               s.find(str):从s[0]开始记录str在s中第一次出现的位置
+               s.find(str,2):从s[2]开始记录str在s第一次出现的位置
+得到字串函数:   substr()
+               s.substr(3):保留s[3]之后的字符串
+               s.substr(3,5):保留s[3]--s[5]的字符串
+替换函数：      replace()
+               s="hello";
+               s.replace(s.find("e"),1," "):把s中第一个"e"替换为空格
+插入函数：      insert()
+               s.insert(2,"hello")；在s的第二个位置插入"hello"并返回给s**s要改变
+添加字符串：    append()
+               s.append("hello");在s的后面添加"hello"
+交换字符串:     swap()
+               swap(s1,s2):交换
+字符串比较函数：compare()
+               s.compare(str);
+字符串大小      size()和length()
+               s.size()
+               s.length()
+#include< string.h >
+strcpy(s1,s2)
+复制字符串s2到s1
+
+strcat(s1,s2)
+连接s2到s1的末尾
+
+strlen(s1)
+返回字符串s1的长度
+
+strcmp(s1,s2)
+若s1和s2是相同的，则返回0，s1< s2,返回值小于0，若s1>s2，返回值大于0
+
+strchr(s1,ch)
+返回一个指针，指向字符串s1中字符ch第一次出现的位置
+
+strstr(s1,s2)
+返回一个指针，指向字符串s1中字符串s2的第一次出现位置
+
+memcpy (void *dest, const void *src, int size)
+从源src所指的内存地址的起始位置开始拷贝n个字节到目标dest所指的内存地址的起始位置中
+strcpy与memcpy的区别：
+1、复制的内容不同。strcpy只能复制字符串，而memcpy可以复制任意内容，例如字符数组、整型、结构体、类等。
+2、复制的方法不同。strcpy不需要指定长度，它遇到被复制字符的串结束符"\0"才结束，所以容易溢出。memcpy则是根据其第3个参数决定复制的长度。
+3、用途不同。通常在复制字符串时用strcpy，而需要复制其他类型数据时则一般用memcpy
+
